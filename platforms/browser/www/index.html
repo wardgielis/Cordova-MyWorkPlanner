@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/index.css"/>
+    <title>My Work Planner</title>
+</head>
+<body class="grey lighten-5">
+<!-- Title Bar -->
+<div class="navbar">
+    <nav class="green darken-1">
+        <div class="nav-wrapper container"><a href="#!" class="brand-logo left">My Planner</a>
+            <a href="#!" data-activates="nav-mobile" class="button-collapse show-on-large right"><i class="fas fa-ellipsis-v"></i></a>
+        </div>
+    </nav>
+</div>
+<!-- Navbar Menu Fixed -->
+<div class="navbar fixed">
+  <ul id="tabs-swipe-demo" class="tabs green darken-1">
+    <li class="tab col s3"><a href="#tasks"><i class="fas fa-tasks"></i></a></li>
+    <li class="tab col s3"><a href="#calendar"><i class="far fa-calendar-alt"></i></a></li>
+    <li class="tab col s3"><a href="#notifications"><i class="far fa-bell"></i></a></li>
+    <li class="tab col s3"><a href="#info"><i class="fas fa-info"></i></a></li>
+  </ul>
+</div>
+<!-- Fixed sideNav -->
+<ul id="nav-mobile" class="side-nav blue-grey darken-3">
+    <li><a href="#!" data-show="tabDevice"><i class="material-icons">smartphone</i>Device</a></li>
+    <li>
+        <div class="divider"></div>
+    </li>
+    <li><a href="#!" data-show="tabNetwork"><i class="material-icons">network_check</i>Network</a></li>
+    <li>
+        <div class="divider"></div>
+    </li>
+    <li><a href="#!" data-show="tabCompass"><i class="material-icons">my_location</i>Compass</a></li>
+</ul>
+<!-- Grid -->
+<div class="container">
+    <div class="row spa">
+          <div id="tasks" class="col s12">
+            <h4 class="center">Het is vandaag <span id="datumVandaag"></span></h4>
+            <div class="row">
+
+              <!-- Het weer van vandaag -->
+              <div class="row">
+                <h5 class="center-align" id="city">Even geduld...</h5>
+                <div class="progress">
+                    <div class="indeterminate"></div>
+                </div>
+                <div class="col s12" id="weather">
+                </div>
+              </div>
+              <!-- Taken -->
+              <div class="col s12 m6 cardsColumn">
+                <div class="card white">
+                  <div class="card-content black-text">
+                    <span class="card-title">Taak Cordova</span>
+                    <p class="card-time"><i class="far fa-clock"></i> 08:30</p>
+                    <p class="card-location"><i class="fas fa-location-arrow"></i> B216</p>
+                    <p>opmerkingen enz lalalalala</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#"><i class="fas fa-edit green-text card-buttons"></i></a>
+                    <a href="#"><i class="fas fa-trash-alt green-text card-buttons"></i></a>
+                    <a href="#"><i class="fas fa-cog green-text card-buttons"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="calendar" class="col s12 grey darken-4">Tuesday</div>
+          <div id="notifications" class="col s12 grey darken-4">Wednesday</div>
+          <div id="info" class="col s12 grey darken-4">Informatie</div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="js/weather.js"></script>
+<script defer src="js/app.js"></script>
+</body>
+</html>

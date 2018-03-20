@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/index.css"/>
+    <title>My Work Planner</title>
+</head>
+<body class="grey lighten-5">
+<!-- Title Bar -->
+<div class="navbar">
+    <nav class="green darken-1">
+        <div class="nav-wrapper container"><a href="#!" class="brand-logo left">My Planner</a>
+            <a href="#!" data-activates="nav-mobile" class="button-collapse show-on-large right"><i class="fas fa-ellipsis-v"></i></a>
+        </div>
+    </nav>
+</div>
+<!-- Navbar Menu Fixed -->
+<div class="navbar">
+    <ul id="tabs-swipe-demo" class="tabs green darken-1">
+      <li class="tab col s3"><a href="#tasks"><i class="fas fa-tasks"></i></a></li>
+      <li class="tab col s3"><a href="#calendar"><i class="far fa-calendar-alt"></i></a></li>
+      <li class="tab col s3"><a href="#notifications"><i class="far fa-bell"></i></a></li>
+      <li class="tab col s3"><a href="#info"><i class="fas fa-info"></i></a></li>
+    </ul>
+</div>
+<!-- Fixed sideNav -->
+<ul id="nav-mobile" class="side-nav blue-grey darken-3">
+    <li><a href="#!" data-show="tabDevice"><i class="material-icons">smartphone</i>Device</a></li>
+    <li>
+        <div class="divider"></div>
+    </li>
+    <li><a href="#!" data-show="tabNetwork"><i class="material-icons">network_check</i>Network</a></li>
+    <li>
+        <div class="divider"></div>
+    </li>
+    <li><a href="#!" data-show="tabCompass"><i class="material-icons">my_location</i>Compass</a></li>
+</ul>
+<!-- Grid -->
+<div class="container">
+    <div class="row spa">
+          <div id="tasks" class="col s12">
+            <h4 class="center">Het is vandaag <span id="datumVandaag"></span></h4>
+            <div class="row">
+              <!-- Weer -->
+
+              <div id="city-name-wrapper">
+                <div class="col s12 m6 cardsColumn">
+                  <div class="card white">
+                    <div class="card-content black-text">
+                        <div class="preloader-wrapper big active">
+                          <div class="spinner-layer spinner-blue">
+                            <div class="circle-clipper left">
+                              <div class="circle"></div>
+                            </div><div class="gap-patch">
+                              <div class="circle"></div>
+                            </div><div class="circle-clipper right">
+                              <div class="circle"></div>
+                            </div>
+                          </div>
+
+                          <div class="spinner-layer spinner-red">
+                            <div class="circle-clipper left">
+                              <div class="circle"></div>
+                            </div><div class="gap-patch">
+                              <div class="circle"></div>
+                            </div><div class="circle-clipper right">
+                              <div class="circle"></div>
+                            </div>
+                          </div>
+
+                          <div class="spinner-layer spinner-yellow">
+                            <div class="circle-clipper left">
+                              <div class="circle"></div>
+                            </div><div class="gap-patch">
+                              <div class="circle"></div>
+                            </div><div class="circle-clipper right">
+                              <div class="circle"></div>
+                            </div>
+                          </div>
+
+                          <div class="spinner-layer spinner-green">
+                            <div class="circle-clipper left">
+                              <div class="circle"></div>
+                            </div><div class="gap-patch">
+                              <div class="circle"></div>
+                            </div><div class="circle-clipper right">
+                              <div class="circle"></div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Effectief Weerbericht-->
+                        <span class="card-title" id="cityname"></span>
+
+                        <div id="city-forecast">
+                          <p class="card-text wheater"></p>
+                          <p class="card-text temp"></p>
+                          <p class="card-text humidity"></p>
+                          <p class="card-text wind-spd"></p>
+                        </div>
+                      </div>
+                      <!-- Reloaden van Weerbericht-->
+                      <div class="card-action center">
+                        <a id="reloadWeather" href="#"><i class="fas fa-sync-alt green-text card-buttons"></i></a>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+
+              <!-- Taken -->
+            <div class="row">
+              <div class="col s12 m6 cardsColumn">
+                <div class="card white">
+                  <div class="card-content black-text">
+                    <span class="card-title">Taak Cordova</span>
+                    <p class="card-text"><i class="far fa-clock"></i> 08:30</p>
+                    <p class="card-text"><i class="fas fa-location-arrow"></i> B216</p>
+                    <p class="card-text">opmerkingen......</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#"><i class="fas fa-edit green-text card-buttons"></i></a>
+                    <a href="#"><i class="fas fa-trash-alt green-text card-buttons"></i></a>
+                    <a href="#"><i class="fas fa-cog green-text card-buttons"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12 m6 cardsColumn">
+                <div class="card white">
+                  <div class="card-content black-text">
+                    <span class="card-title">Les UML</span>
+                    <p class="card-text"><i class="far fa-clock"></i> 12:30 - 14:00</p>
+                    <p class="card-text"><i class="fas fa-location-arrow"></i> BEMT Zuid - Korea</p>
+                    <p class="card-text">opmerkingen......</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#"><i class="fas fa-edit green-text card-buttons"></i></a>
+                    <a href="#"><i class="fas fa-trash-alt green-text card-buttons"></i></a>
+                    <a href="#"><i class="fas fa-cog green-text card-buttons"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p><a class="btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">add</i></a></p>
+          </div>
+          <div id="calendar" class="col s12">
+            <h4 class="center">Kalender</h4>
+            <p>Scherm nog niet beschikbaar. Moet eerst Google Calender API werkende krijgen om lay-out hiervan te maken.</p>
+          </div>
+          <div id="notifications" class="col s12">
+            <h4 class="center">Notificaties</h4>
+            <p>Aankomende notificaties: </p>
+            <div class="row">
+              <div class="col s12 m6 cardsColumn">
+                <div class="card white">
+                  <div class="card-content black-text">
+                    <span class="card-title">Notificatie Cordova</span>
+                    <p class="card-text"><i class="far fa-clock"></i> 10:00 - "Niet vergeten Cordova vandaag uploaden."</p>
+                    <p class="card-text"><i class="fas fa-exclamation"></i> 23:30 - "Nog een halfuur om Cordova te uploaden!"</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="#"><i class="fas fa-edit green-text card-buttons"></i></a>
+                    <a href="#"><i class="fas fa-trash-alt green-text card-buttons"></i></a>
+                    <a href="#"><i class="fas fa-cog green-text card-buttons"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p><a class="btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">add</i></a></p>
+          </div>
+          <div id="info" class="col s12">
+            <h4 class="center">Info</h4>
+            <p>Hallo, ik ben Ward en ik ben de auteur van deze app. Ik heb deze app gemaakt om het plannen van mijn dagen wat te vergemakkelijken.
+            Hierin leg ik vooral de focus op taken zodat ik weet wanneer ik een bepaalde taak voor school, werk of hobby's moet afmaken.</p>
+            <p>Verder voorzie ik dat mijn lessen, hobby's en andere verplichtingen die ik elke week opnieuw heb er ook in komen te staan. Dit zodat ik hier ook rekening mee
+            kan houden bij het plannen van mijn taken.</p>
+            <p>Met de Google Calender API, is het de bedoeling dat ik een kalender kan creëren zodat ik kan zien welke evenementen er komende weken/maanden zullen plaatsvinden.</p>
+            <p>Tenslotte vond ik het belangrijk bij het maken van deze app, dat ik niet telkens de app moet openen om te weten welke taken/events er aankomen. Daarom wil ik met push notifications
+            me er aan helpen herinneren dat ik me bijvoorbeeld moet klaarmaken voor een les of niet mag vergeten een bepaalde taak te maken.</p>
+            <p>Voor vragen of info kan u me contacteren met onderstaande infokaartje.</p>
+
+            <div class="col s12 m6 cardsColumn">
+              <div class="card white">
+                <div class="card-content black-text">
+                  <span class="card-title">Contact</span>
+                  <p class="card-text">Ward Gielis</p>
+                  <p class="card-text">r0655065@student.thomasmore.be</p>
+                  <p class="card-text"><a href="0485212317">0485212317</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script defer src="js/weather.js"></script>
+<script defer src="js/app.js"></script>
+</body>
+</html>

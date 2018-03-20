@@ -1,0 +1,65 @@
+body{
+  color:black;
+}
+
+h4 {
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:20px;
+    color:black;
+}
+
+.brand-logo{
+  font-size:20px !important;
+  font-family: 'Comfortaa', cursive;
+}
+
+.hamburgerMenu{
+  color:white !important;
+}
+
+h4{
+  font-size:20px !important;
+  font-family: 'Comfortaa', cursive;
+}
+
+nav{
+  box-shadow:none;
+}
+
+.side-nav li a{
+  color:white;
+}
+
+.tabs a{
+  color:white !important;
+  font-size:22px !important;
+}
+
+.indicator{
+  background-color:white !important;
+}
+
+.carousel{
+}
+
+.tabs-content.carousel .carousel-item{
+  height:600%;
+}
+
+.card-title{
+  font-size:20px;
+}
+
+.card-time{
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.card-location{
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.card-buttons{
+  font-size:20px;
+}

@@ -1,0 +1,24 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "be.wardgielis.myworkplanner"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "be.wardgielis.myworkplanner"
+    },
+    "cordova-plugin-android-fingerprint-auth": {
+      "PACKAGE_NAME": "be.wardgielis.myworkplanner"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "be.wardgielis.myworkplanner"
+    }
+  },
+  "dependent_plugins": {}
+}
